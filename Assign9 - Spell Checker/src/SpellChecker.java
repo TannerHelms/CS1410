@@ -4,17 +4,19 @@ import java.util.Collections;
 
 public class SpellChecker {
     public static void main(String[] args) {
-
         // Step 1: Demonstrate tree capabilities
-        testTree();
+        //testTree();
 
         // Step 2: Read the dictionary and report the tree statistics
+        long start = System.currentTimeMillis();
         BinarySearchTree<String> dictionary = readDictionary();
-        reportTreeStats(dictionary);
+        //reportTreeStats(dictionary);
 
         // Step 3: Perform spell checking
         ArrayList<String> words = readWords();
         spellCheck(words,dictionary);
+
+        System.out.println(System.currentTimeMillis() - start);
 
     }
 
